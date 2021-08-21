@@ -30,14 +30,53 @@ function priceTextToNumbers(){
     const deliveryChargeFloat = parseFloat(deliveryCharge);
     return bestPriceCalcInt + extraMemoryCostFloat + extraStorageCostFloat + deliveryChargeFloat;
 };
-
-// 8GB best-price button event handler
-// showing price and cost, and applying promo-code discount
-document.getElementById("best-price").addEventListener("click", function(){
+// function calcTotalPrice
+function calcTotalPrice(){
     document.getElementById("total-price").innerText = priceTextToNumbers();
     const totalPrice = document.getElementById("total-price").innerText;
     document.getElementById("total-price-show").innerText = totalPrice;
+};
+
+// 8GB best-price button event handler
+document.getElementById("best-price").addEventListener("click", function(){
+    document.getElementById("extra-memory-cost").innerText = parseFloat(0);
+    calcTotalPrice();
 });
+// extra-memory-cost-button event handler
+document.getElementById("extra-memory-cost-button").addEventListener("click", function(){
+    document.getElementById("extra-memory-cost").innerText = parseFloat(180);
+    calcTotalPrice();
+});
+// basic-storage-button event handler
+document.getElementById("basic-storage-button").addEventListener("click", function(){
+    document.getElementById("extra-storage-cost").innerText = parseFloat(0);
+    calcTotalPrice();
+});
+// extra-storage-512gb-button event handler
+document.getElementById("extra-storage-512gb-button").addEventListener("click", function(){
+    document.getElementById("extra-storage-cost").innerText = parseFloat(100);
+    calcTotalPrice();
+});
+// extra-storage-1tb-button event handler
+document.getElementById("extra-storage-1tb-button").addEventListener("click", function(){
+    document.getElementById("extra-storage-cost").innerText = parseFloat(180);
+    calcTotalPrice();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // applying promo code
 const cupponCode = "stevekaku";
