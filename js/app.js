@@ -31,11 +31,29 @@ function priceTextToNumbers(){
     return bestPriceCalcInt + extraMemoryCostFloat + extraStorageCostFloat + deliveryChargeFloat;
 };
 
-priceTextToNumbers();
 // 8GB best-price button event handler
-// showing price and cost and applying promo-code discount
+// showing price and cost, and applying promo-code discount
 document.getElementById("best-price").addEventListener("click", function(){
     document.getElementById("total-price").innerText = priceTextToNumbers();
     const totalPrice = document.getElementById("total-price").innerText;
     document.getElementById("total-price-show").innerText = totalPrice;
+});
+
+// applying promo code
+const cupponCode = "stevekaku";
+const cupponCodeMatch = cupponCode.toLocaleLowerCase();
+document.getElementById("promo-code").addEventListener("click", function(){
+    const cupponInputValue = document.getElementById("cuppon-field").value;
+    if (cupponInputValue == cupponCodeMatch){
+        const totalPrice = document.getElementById("total-price").innerText;
+        const totalPriceFloat = parseFloat(totalPrice);
+        const discountPercent = totalPriceFloat * 0.2;
+        const cupponApplied = totalPriceFloat - discountPercent;
+        document.getElementById("total-price-show").innerText = cupponApplied;
+        document.getElementById("cuppon-field").value = "";
+        console.log(cupponCodeMatch);
+    }
+    else{
+        document.getElementById("cuppon-field").value = "";
+    }
 });
