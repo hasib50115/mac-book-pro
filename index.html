@@ -13,62 +13,62 @@
 <body>
     <section class="mt-16 mb-16">
         <div class="grid grid-cols-2 mx-auto w-10/12">
-            <div class="w-6/12">
+            <div>
                 <img class="mac-img" src="images/mac.png" alt="">
             </div>
             <div>
-                <h1 class="text-5xl font-semibold">Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
-                <p class="my-6 text-base">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard - US English</p>
+                <h1 class="mac-specification-title text-5xl font-semibold">Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                <p class="mac-text my-6 text-base">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse Magic Keyboard - US English</p>
                 <!-- memory buttons -->
-                <h4 class="font-bold mt-8">Memory</h4>
+                <h4 class="specification-title font-bold mt-8">Memory</h4>
                 <div class="">
-                    <button id="best-price" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">8GB unified memory</button>
-                    <button id="extra-memory-cost-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">16GB unified memory</button>
+                    <button id="best-price" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">8GB unified memory</button>
+                    <button id="extra-memory-cost-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">16GB unified memory</button>
                 </div>
                 <!-- storage buttons -->
-                <h4 class="font-bold mt-8">Storage</h4>
+                <h4 class="specification-title font-bold mt-8">Storage</h4>
                 <div class="">
-                    <button id="basic-storage-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">256GB  SSD storage</button>
-                    <button id="extra-storage-512gb-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">512GB  SSD storage</button>
-                    <button id="extra-storage-1tb-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">1TB  SSD storage</button>
+                    <button id="basic-storage-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">256GB  SSD storage</button>
+                    <button id="extra-storage-512gb-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">512GB  SSD storage</button>
+                    <button id="extra-storage-1tb-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">1TB  SSD storage</button>
                 </div>
                 <!-- delivery option  -->
-                <h4 class="font-bold mt-8">Choose your delivery option</h4>
+                <h4 class="specification-title font-bold mt-8">Choose your delivery option</h4>
                 <div class="">
-                    <button id="free-delivery-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">Friday, Aug 25 Free Prime Delivery</button>
-                    <button id="fast-delivery-button" class="border rounded m-2 px-6 py-2 hover:bg-gray-700 hover:text-white">Friday, Aug 21 Delivery charge $20</button>
+                    <button id="free-delivery-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">Friday, Aug 25 Free Prime Delivery</button>
+                    <button id="fast-delivery-button" class="btn border rounded m-2 px-4 py-2 hover:bg-gray-700 hover:text-white">Friday, Aug 21 Delivery charge $20</button>
                 </div>
                 <div class="w-6/12 mt-12">
-                    <div class="flex font-semibold">
+                    <div class="flex font-semibold text-xl">
                         <p class="flex-1">Best Price</p>
                         <p class="flex-1">$<span id="best-price-calc">1299</span></p>
                     </div>
                     <hr class="mt-2">
-                    <div class="flex font-semibold mt-2">
+                    <div class="flex font-semibold mt-2 text-xl">
                         <p class="flex-1">Extra Memory Cost</p>
                         <p class="flex-1">$<span id="extra-memory-cost">0</span></p>
                     </div>
                     <hr class="mt-2">
-                    <div class="flex font-semibold mt-2">
+                    <div class="flex font-semibold mt-2 text-xl">
                         <p class="flex-1">Extra Storage Cost</p>
                         <p class="flex-1">$<span id="extra-storage-cost">0</span></p>
                     </div>
                     <hr class="mt-2">
-                    <div class="flex font-semibold mt-2">
+                    <div class="flex font-semibold mt-2 text-xl">
                         <p class="flex-1">Delivery Charge</p>
                         <p class="flex-1">$<span id="delivery-charge">0</span></p>
                     </div>
                     <hr class="mt-2">
-                    <div class="flex font-bold mt-2">
+                    <div class="flex font-semibold mt-2 text-2xl">
                         <p class="flex-1">Total Price</p>
                         <p class="flex-1">$<span id="total-price">1299</span></p>
                     </div>
                     <hr class="mt-2">
                     <div class="mt-6">
-                        <p>Add Promo Code</p>
+                        <p class="promo-specification-title">Add Promo Code</p>
                         <div class="flex font-semibold mt-2">
                             <input id="cuppon-field" class="flex-auto border rounded px-2 text-2xl">
-                            <button id="promo-code" class="flex-auto m-2 px-2 py-2 bg-red-600 text-white font-semibold rounded-md">Apply</button>
+                            <button id="promo-apply-btn" class="flex-auto m-2 px-2 py-2 bg-red-600 text-white font-semibold rounded-md">Apply</button>
                         </div>
                     </div>
                 </div>
