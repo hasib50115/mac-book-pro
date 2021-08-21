@@ -62,6 +62,17 @@ document.getElementById("extra-storage-1tb-button").addEventListener("click", fu
     document.getElementById("extra-storage-cost").innerText = parseFloat(180);
     calcTotalPrice();
 });
+// free-delivery-button event handler
+document.getElementById("free-delivery-button").addEventListener("click", function(){
+    document.getElementById("delivery-charge").innerText = parseFloat(0);
+    calcTotalPrice();
+});
+// fast-delivery-button event handler
+document.getElementById("fast-delivery-button").addEventListener("click", function(){
+    document.getElementById("delivery-charge").innerText = parseFloat(20);
+    calcTotalPrice();
+});
+
 
 
 
