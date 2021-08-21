@@ -2,14 +2,14 @@
 function priceTextToNumbers(){
     // converting prices and delivery-charge text-to-numbers
     const bestPriceCalc = document.getElementById("best-price-calc").innerText;
-    const bestPriceCalcInt = parseInt(bestPriceCalc);
+    const bestPriceCalcFloat = parseFloat(bestPriceCalc);
     const extraMemoryCost = document.getElementById("extra-memory-cost").innerText;
     const extraMemoryCostFloat = parseFloat(extraMemoryCost);
     const extraStorageCost = document.getElementById("extra-storage-cost").innerText;
     const extraStorageCostFloat = parseFloat(extraStorageCost);
     const deliveryCharge = document.getElementById("delivery-charge").innerText;
     const deliveryChargeFloat = parseFloat(deliveryCharge);
-    return bestPriceCalcInt + extraMemoryCostFloat + extraStorageCostFloat + deliveryChargeFloat;
+    return bestPriceCalcFloat + extraMemoryCostFloat + extraStorageCostFloat + deliveryChargeFloat;
 };
 // function calcTotalPrice
 function calcTotalPrice(){
